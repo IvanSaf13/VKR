@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check USERS DATA</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        function checkCerti() {
+            const name = document.querySelector(".data").value;
+            const xhr = new XMLHttpRequest();
+            xhr.open("GET", "https://testnodes.wavesnodes.com/addresses/data/3MuKMDEKz9YqzcY1QLjRWEPQkuZKRsN3HZu/"+name);
+            xhr.onload = () => {
+                const result = document.querySelector(".result");
+                if (JSON.parse(xhr.response).key === name) {
+                    result.innerText = "certificate is VALID";
+                } else {
+                    result.innerText = "certificate is NOT VALID";
+                }
+            };
+            xhr.send();
+        }
+    </script>
+</head>
+<body>
+    <main class="main">
+        <h1>check USERS DATA</h1>
+        <input type="text" class="data" name="data" placeholder="Series and Number"><br>
+        <button onclick="checkCerti()">check validity</button>
+
+        <div class="result">is your data?</div>
+    </main>
+</body>
+</html>
