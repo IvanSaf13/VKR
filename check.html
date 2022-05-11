@@ -12,9 +12,9 @@
             xhr.onload = () => {
                 const result = document.querySelector(".result");
                 if (JSON.parse(xhr.response).key === name) {
-                    result.innerText = "certificate is VALID";
+                    result.innerText = "data is VALID";
                 } else {
-                    result.innerText = "certificate is NOT VALID";
+                    result.innerText = "data is NOT VALID";
                 }
             };
             xhr.send();
