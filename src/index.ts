@@ -5,7 +5,7 @@ const signer = new Signer( {
   // Specify URL of the node on Testnet
   NODE_URL: 'https://nodes-testnet.wavesnodes.com'
 });
-signer.setProvider(new ProviderWeb('https://testnet.waves.exchange/signer'));
+signer.setProvider(new ProviderWeb('https://testnet.waves.exchange/signer/'));
 
 function sendData() {
     console.log("sending data");
