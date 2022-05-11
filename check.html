@@ -8,7 +8,7 @@
         function checkCerti() {
             const name = document.querySelector(".data").value;
             const xhr = new XMLHttpRequest();
-            xhr.open("GET", "https://testnodes.wavesnodes.com/addresses/data/3N2xrsQEBB8smpYRAoRri6Jzfdype8LwSzn/"+name);
+            xhr.open("GET", "https://testnodes.wavesnodes.com/addresses/data/3MzYMGLbWXy5avss659ydaBXPw5fG8uvpMm/"+name);
             xhr.onload = () => {
                 const result = document.querySelector(".result");
                 if (JSON.parse(xhr.response).key === name) {
